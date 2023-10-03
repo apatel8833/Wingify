@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windgify task</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            font-family: 'Poppins', sans-serif;
+
+        }
+        #main{
+            position: relative;
+            height: 80vh;
+            width: 80vw;
+            background-color: gold;
+            top: 10vh;
+            left: 10vw;
+            display: flex;
+            
+
+        }
+        #main>.left
+        {
+            position: relative;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* background-color: brown; */
+        }
+        .left>h1{
+            font-weight: bold;
+        }
+        .left>h1:nth-child(2){
+            font-weight: 400;
+            color: rgb(59, 59, 59);
+        }
+        .left>form{
+            position: relative;
+            height: 50vh;
+            width: 80%;
+        }
+        .left>form>input{
+            padding: 25px;
+            width: 100%;
+            font-size: larger;
+            margin-top: 20px;
+            outline: none;
+            border: none;
+        }
+        .left>form>.check{
+            margin-top: 10px;
+        }
+        .left>form>.check>input{
+            padding: 20px;
+            cursor: pointer;
+        }
+        .left>form>input:nth-child(4){
+            /* width: 100%;
+            padding: 25px; */
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .left>a{
+            color: black;
+        }
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right>img{
+           
+            height: 60vh;
+            width: 30vw;
+        }
+        #main>img{
+            position: absolute;
+            right: 2%;
+            top: 2%;
+            height: 5vh;
+            
+        }
+
+
+        @media screen and (max-width:500px) {
+            #main>.right{
+                display: none;
+            }
+            #main>.left{
+                width: 100%;
+                justify-content: center;
+            }
+            #main>.left>h1{
+                font-size: medium;
+            }
+            #main>img{
+                height: 2vh;
+                top: 5%;
+                right: 5%;
+            }
+
+        }
+
+        @media screen and (max-width:700px) {
+            #main>.right{
+                display: none;
+            }
+            #main>.left{
+                width: 100%;
+                justify-content: center;
+            }
+            #main>.left>h1{
+                font-size: medium;
+            }
+            #main>img{
+                height: 2vh;
+                top: 5%;
+                right: 5%;
+            }
+
+        }
+
+        @media screen and (max-width:1160px) {
+            #main>.right{
+                display: none;
+            }
+            #main>.left{
+                width: 100%;
+                justify-content: center;
+            }
+            #main>.left>h1{
+                font-size: medium;
+            }
+            #main>img{
+                height: 2vh;
+                top: 5%;
+                right: 5%;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <img src="https://cdn-icons-png.flaticon.com/512/57/57165.png" alt="">
+        <div class="left">
+            <h1>GET $10 OFF WHEN YOU SIGN UP FOR</h1>
+            <h1>SAVINGS,NEWS,UPDATES AND MORE</h1>
+            <form action="" id="form">
+                <input type="text" placeholder="Enter Your Name" name="values" id="name" required>
+                <input type="email" placeholder="Enter Email Address" name="values" id="email" required>
+                <div class="check">
+                    <input type="checkbox" placeholder="check the box" name="" id="checkbox" required>
+                    <span>Check the box to receive monthly newsletter..</span>
+                </div>
+                <input type="submit" value="SIGN IN">
+            </form>
+            <a href="">PRIVACY POLICY</a>
+        </div>
+        <div class="right">
+            <img src="https://img.freepik.com/premium-vector/yellow-christmas-sale-background-with-50-discount-offer_1302-7869.jpg?w=2000" alt="">
+        </div>
+    </div>
+    <script>
+        var form = document.getElementById("form");
+
+        form.addEventListener('submit',function(event){
+            event.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            
+            var email = document.getElementById('email').value;
+            
+            var checkbox = document.getElementById('checkbox').value
+            alert(`SIGN IN SUCCESSFULLY,
+            Name = ${name},
+            Email = ${email}`);
+            console.log("Name = ",name);
+            console.log("Email = ",email);
+
+        })
+        
+    </script>
+</body>
+</html>
